@@ -25,8 +25,8 @@ print(f'The solution to P1P1 is {sol_1_1}')
 #Problem 1 Part 2
 ##################
 
-# take moving average of depth data
-average = [sum(measures)/3.0 for measures in zip(lines, lines[1:], lines[2:])]
+# take moving sum of depth data
+average = [sum(measures) for measures in zip(lines, lines[1:], lines[2:])]
 
 # apply counter to the depth data and sum the results
 sol_1_2 = sum(map(counter, zip(average, average[1:])))
