@@ -5,10 +5,13 @@
 from dataclasses import dataclass
 
 # open the file with the depth inputs
-file = open('input_2.txt', 'r')
+file = open('input.txt', 'r')
    
 # read in the file line by line and conver to integers
 commands = [line.rstrip().split() for line in file.readlines()]
+
+# close IO resources
+file.close()
 
 def parse_command(command):
     """
